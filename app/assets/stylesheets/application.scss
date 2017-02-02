@@ -1,7 +1,6 @@
 @import "materialize";
 @import "toastr";
 
-
 body {
   display: flex;
   min-height: 100vh;
@@ -10,4 +9,8 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+
+.container {
+	width: 95%;
 }
