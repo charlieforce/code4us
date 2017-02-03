@@ -55,7 +55,7 @@ Rails.application.configure do
     port: 587,
     enable_starttls_auto: true,
     user_name: 'charlieforce77',
-    password: 'prodan69',
+    password: ENV['MAILER_API_KEY'],
     authentication: 'plain'
 }
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker

@@ -48,6 +48,13 @@ gem 'friendly_id', '~> 5.2'
 
 gem 'active_admin-sortable_tree', '~> 0.3.0'
 
+gem 'stripe'
+
+gem 'better_errors'
+
+gem 'binding_of_caller'
+
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

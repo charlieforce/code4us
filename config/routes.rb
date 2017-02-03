@@ -1,22 +1,23 @@
 Rails.application.routes.draw do
 
-  get 'task/show'
-
-  get 'project/Task'
-
-  get 'project/show'
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout', :edit => 'profile'},
               :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
 
   get 'pages/about'
+  get '/myprojects' => 'project#list'
+  post '/free' => 'charge#free'
+  post '/pay' => 'charge#pay'
 
   root 'project#index'
 
   resources :project do
     resources :task, only: [:show]
+  end
+
+  resources :project do
+    resources :reviews, only: [:create, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

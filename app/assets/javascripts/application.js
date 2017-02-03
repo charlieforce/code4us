@@ -11,8 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require active_admin
 //= require jquery_ujs
 //= require turbolinks
 //= require toastr
+//= require jquery.timeago
 //= require materialize-sprockets
 //= require_tree .
